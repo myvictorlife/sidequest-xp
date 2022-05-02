@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/sidequest-xp",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
