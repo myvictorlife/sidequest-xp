@@ -17,7 +17,7 @@ The psioniq File Header VSCode Extension will insert a header into the current d
 - Last Modified: Tuesday, 4th May 2022 8:21:52 am
 - Copyright © 2022 Sidequest XP
 
-## Paths 
+## Paths
 
     $ @sidequest-xp-store // Sidequest XP Store
     $ @sidequest-xp-components // Sidequest XP Compontentes
