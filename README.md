@@ -19,9 +19,9 @@ The psioniq File Header VSCode Extension will insert a header into the current d
 
 ## Paths
 
-    $ @sidequest-xp-store // Sidequest XP Store
-    $ @sidequest-xp-components // Sidequest XP Compontentes
-    $ @sidequest-xp-pages // Sidequest XP Pages
+    $ @sidequest-xp-store // Store
+    $ @sidequest-xp-components // Components
+    $ @sidequest-xp-core // Core
     $ @sidequest-xp-shared // Services / ...
     $ @environment // Configuration (project, languages, hosts, ...)
 

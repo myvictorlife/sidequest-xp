@@ -1,1 +1,12 @@
-<p>product works!</p>
+<mat-card class="product-card">
+  <img mat-card-image [src]="product?.image" />
+  <mat-card-content>
+    <p>
+      {{ product.name }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions fxLayout="row" fxLayoutAlign="space-between center">
+    <button mat-button>BUY</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
