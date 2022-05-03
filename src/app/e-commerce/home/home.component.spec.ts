@@ -2,10 +2,9 @@
  * File: home.component.spec.ts
  * Project: sidequest-xp
  * Created: Tuesday, 3rd May 2022 6:46:01 pm
- * Last Modified: Tuesday, 3rd May 2022 8:10:40 pm
+ * Last Modified: Tuesday, 3rd May 2022 8:27:48 pm
  * Copyright © 2022 Sidequest XP
  */
-
 
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ComponentsModule } from '@sidequest-xp-components/components.module';
@@ -18,7 +17,7 @@ import { Observable, of } from 'rxjs';
 import { ProductsComponent } from '../products/products.component';
 import { ProductComponent } from '../product/product.component';
 class FakeLoader implements TranslateLoader {
-  getTranslation(lang: string): Observable<any> {
+  getTranslation(): Observable<any> {
     return of({ test: 'This is a Fake translate' });
   }
 }
@@ -30,7 +29,7 @@ describe('HomeComponent', () => {
   let initialState: any;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomeComponent, ProductsComponent, ProductComponent ],
+      declarations: [HomeComponent, ProductsComponent, ProductComponent],
       imports: [
         ComponentsModule,
         TranslateModule.forRoot({
@@ -38,15 +37,14 @@ describe('HomeComponent', () => {
             provide: TranslateLoader,
             useClass: FakeLoader,
           },
-        })
+        }),
       ],
       providers: [
         provideMockStore({
           initialState,
-        })
-      ]
-    })
-    .compileComponents();
+        }),
+      ],
+    }).compileComponents();
   });
 
   beforeEach(() => {

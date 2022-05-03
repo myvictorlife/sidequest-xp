@@ -36,7 +36,8 @@
         "@angular-eslint/component-selector": [
           "error",
           { "type": "element", "prefix": "sidequest-xp", "style": "kebab-case" }
-        ]
+        ],
+        "@typescript-eslint/no-explicit-any": "off"
       }
     },
     {

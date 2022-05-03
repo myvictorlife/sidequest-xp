@@ -6,8 +6,6 @@
  * Copyright © 2022 Sidequest XP
  */
 
-import { ProductEffects } from "./store/product/effects/product.effects";
+import { ProductEffects } from './store/product/effects/product.effects';
 
-export const coreEffectsAtBootstrap = [
-    ProductEffects
-];
+export const coreEffectsAtBootstrap = [ProductEffects];

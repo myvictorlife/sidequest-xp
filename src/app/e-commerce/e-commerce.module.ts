@@ -16,16 +16,12 @@ import { ComponentsModule } from '../components/components.module';
 import { ProductsComponent } from './products/products.component';
 
 @NgModule({
-  declarations: [
-    HomeComponent,
-    ProductComponent,
-    ProductsComponent
-  ],
+  declarations: [HomeComponent, ProductComponent, ProductsComponent],
   imports: [
     CommonModule,
     EcommerceRoutingModule,
     TranslateModule.forChild(),
-    ComponentsModule
-  ]
+    ComponentsModule,
+  ],
 })
-export class ECommerceModule { }
+export class ECommerceModule {}

@@ -10,7 +10,8 @@
     "test:coverage": "jest --coverage",
     "test:coverage:silent": "npx jest --silent --ci --coverage --coverageReporters='text' --coverageReporters='text-summary'",
     "deploy": "npm run build --prod && firebase deploy",
-    "lint": "prettier --check . && ng lint"
+    "lint": "prettier --check . && ng lint",
+    "prettier:format": "prettier --write ."
   },
   "private": true,
   "dependencies": {

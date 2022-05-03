@@ -6,7 +6,6 @@
  * Copyright © 2022 Sidequest XP
  */
 
-
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { EMPTY } from 'rxjs';
@@ -16,17 +15,18 @@ import * as fromProduct from '@sidequest-xp-core/store/product/actions/product.a
 
 @Injectable()
 export class ProductEffects {
- 
-  loadAllProducts$ = createEffect(() => this.actions$.pipe(
-    ofType(fromProduct.loadAllProducts),
-    mergeMap(() => this.productService.fetchAllProducts()
-      .pipe(
-        map(products => fromProduct.loadSuccess({ products })),
-        catchError(() => EMPTY)
-      ))
+  loadAllProducts$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(fromProduct.loadAllProducts),
+      mergeMap(() =>
+        this.productService.fetchAllProducts().pipe(
+          map((products) => fromProduct.loadSuccess({ products })),
+          catchError(() => EMPTY)
+        )
+      )
     )
   );
- 
+
   constructor(
     private actions$: Actions,
     private productService: ProductService

@@ -7,9 +7,9 @@
  */
 
 export interface ProductResponse {
-    data: {
-        products: Product[]
-    }
+  data: {
+    products: Product[];
+  };
 }
 
 export interface Product {

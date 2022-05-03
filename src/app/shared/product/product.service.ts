@@ -6,24 +6,22 @@
  * Copyright © 2022 Sidequest XP
  */
 
-
-import { HttpClient } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { map } from "rxjs";
-import { externalToolsUtils } from "@sidequest-xp-core/utils/external-tools";
-import { ProductResponse } from "./product-response.models";
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { map } from 'rxjs';
+import { externalToolsUtils } from '@sidequest-xp-core/utils/external-tools';
+import { ProductResponse } from './product-response.models';
 
 @Injectable()
 export class ProductService {
+  constructor(private http: HttpClient) {}
 
-    constructor(private http: HttpClient) {}
-
-    fetchAllProducts() {
-        const url = externalToolsUtils.getProductsUrl();
-        return this.http.get<ProductResponse>(url).pipe(
-            map(response => {
-                return response.data.products;
-            })
-        );
-    }
+  fetchAllProducts() {
+    const url = externalToolsUtils.getProductsUrl();
+    return this.http.get<ProductResponse>(url).pipe(
+      map((response) => {
+        return response.data.products;
+      })
+    );
+  }
 }

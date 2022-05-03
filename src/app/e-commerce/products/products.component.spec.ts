@@ -6,7 +6,6 @@
  * Copyright © 2022 Sidequest XP
  */
 
-
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideMockStore } from '@ngrx/store/testing';
 import { ProductComponent } from '../product/product.component';
@@ -19,15 +18,14 @@ describe('ProductsComponent', () => {
   let initialState: any;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProductsComponent, ProductComponent ],
+      declarations: [ProductsComponent, ProductComponent],
       imports: [],
       providers: [
         provideMockStore({
           initialState,
-        })
-      ]
-    })
-    .compileComponents();
+        }),
+      ],
+    }).compileComponents();
   });
 
   beforeEach(() => {

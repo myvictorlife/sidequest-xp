@@ -6,14 +6,11 @@
  * Copyright © 2022 Sidequest XP
  */
 
-
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'sidequest-xp-product',
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss']
+  styleUrls: ['./product.component.scss'],
 })
-export class ProductComponent {
-
-}
+export class ProductComponent {}

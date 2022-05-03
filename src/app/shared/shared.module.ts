@@ -13,8 +13,6 @@ import { ProductService } from './product/product.service';
 @NgModule({
   declarations: [],
   imports: [CommonModule],
-  providers: [
-      ProductService
-  ]
+  providers: [ProductService],
 })
 export class SharedModule {}

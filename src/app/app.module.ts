@@ -14,7 +14,6 @@ import { CoreModule } from './core/core.module';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '@environment';
 
-
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -31,7 +30,7 @@ import { environment } from '@environment';
         deps: [HttpClient],
       },
     }),
-    CoreModule
+    CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

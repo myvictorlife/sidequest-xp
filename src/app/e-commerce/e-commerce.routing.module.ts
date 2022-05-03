@@ -13,11 +13,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [
-    { path: '',   redirectTo: 'e-commerce', pathMatch: 'full' },
-    { path: 'e-commerce', component: HomeComponent },
-    { path: 'product', component: ProductComponent },
-    { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
-  ];
+  { path: '', redirectTo: 'e-commerce', pathMatch: 'full' },
+  { path: 'e-commerce', component: HomeComponent },
+  { path: 'product', component: ProductComponent },
+  { path: '**', component: PageNotFoundComponent }, // Wildcard route for a 404 page
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

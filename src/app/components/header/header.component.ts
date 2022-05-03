@@ -6,14 +6,11 @@
  * Copyright © 2022 Sidequest XP
  */
 
-
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'sidequest-xp-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
-
-}
+export class HeaderComponent {}

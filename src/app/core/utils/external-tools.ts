@@ -9,6 +9,5 @@
 import { environment } from '@environment';
 
 export const externalToolsUtils = {
-    
-    getProductsUrl: (): string => `${environment.baseURL}/products`
-}
+  getProductsUrl: (): string => `${environment.baseURL}/products`,
+};

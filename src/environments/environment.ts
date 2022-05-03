@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseURL: 'http://localhost:5001/sidequest-xp/us-central1'
+  baseURL: 'http://localhost:5001/sidequest-xp/us-central1',
 };
 
 /*

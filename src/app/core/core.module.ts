@@ -17,7 +17,7 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     SharedModule,
-    EffectsModule.forFeature(coreEffectsAtBootstrap)
+    EffectsModule.forFeature(coreEffectsAtBootstrap),
   ],
 })
 export class CoreModule {}
