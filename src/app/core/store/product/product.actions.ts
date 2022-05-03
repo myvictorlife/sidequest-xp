@@ -9,6 +9,6 @@ import { createAction, props } from '@ngrx/store';
 import { Product } from './product.models';
 
 export const loadSuccess = createAction(
-    '[Product] Load Success',
-    props<{products: Product[]}>()
+  '[Product] Load Success',
+  props<{ products: Product[] }>()
 );

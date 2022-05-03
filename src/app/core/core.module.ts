@@ -13,9 +13,6 @@ import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    EffectsModule.forFeature(coreEffectsAtBootstrap)
-  ]
+  imports: [CommonModule, EffectsModule.forFeature(coreEffectsAtBootstrap)],
 })
-export class CoreModule { }
+export class CoreModule {}

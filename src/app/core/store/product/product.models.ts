@@ -6,10 +6,9 @@
  * Copyright © 2022 Sidequest XP
  */
 
-
 export interface Product {
-    id: string;
-    name: string;
-    description: string;
-    price: string;
+  id: string;
+  name: string;
+  description: string;
+  price: string;
 }

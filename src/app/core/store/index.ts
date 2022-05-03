@@ -7,14 +7,12 @@
  */
 
 import {
-  createSelector,
-  createFeatureSelector,
   ActionReducerMap,
+  createFeatureSelector,
+  createSelector,
 } from '@ngrx/store';
 
-import {
-  MetaReducer
-} from '@ngrx/store';
+import { MetaReducer } from '@ngrx/store';
 import { environment } from '../../../environments/environment';
 
 import * as fromProduct from './product/product.reducer';
@@ -27,7 +25,8 @@ export const reducers: ActionReducerMap<State> = {
   products: fromProduct.reducer,
 };
 
-export const selectProductState = createFeatureSelector<fromProduct.State>('products');
+export const selectProductState =
+  createFeatureSelector<fromProduct.State>('products');
 
 export const selectProductsIds = createSelector(
   selectProductState,
@@ -56,4 +55,6 @@ export const selectCurrentProduct = createSelector(
   (productEntities, productId) => productId && productEntities[productId]
 );
 
-export const metaReducers: MetaReducer<State>[] = !environment.production ? [] : [];
+export const metaReducers: MetaReducer<State>[] = !environment.production
+  ? []
+  : [];

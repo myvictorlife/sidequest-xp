@@ -10,7 +10,10 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+platformBrowserDynamic()
+  .bootstrapModule(AppModule)
+  .catch((err) => console.error(err));
 
-document.querySelector('html')?.setAttribute('sidequest-xp-version', packageJson.version);
+document
+  .querySelector('html')
+  ?.setAttribute('sidequest-xp-version', packageJson.version);
