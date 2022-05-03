@@ -2,14 +2,14 @@
  * File: product.reducer.ts
  * Project: sidequest-xp
  * Created: Tuesday, 3rd May 2022 8:12:16 am
- * Last Modified: Tuesday, 3rd May 2022 8:22:47 am
+ * Last Modified: Tuesday, 3rd May 2022 7:32:57 pm
  * Copyright © 2022 Sidequest XP
  */
 
 import { createReducer, on } from '@ngrx/store';
-import { loadSuccess } from './product.actions';
+import { loadSuccess } from '../actions/product.actions';
 import { EntityAdapter, EntityState, createEntityAdapter } from '@ngrx/entity';
-import { Product } from './product.models';
+import { Product } from '../models/product.models';
 
 export interface State extends EntityState<Product> {
   // additional entities state properties

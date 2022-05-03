@@ -12,7 +12,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { metaReducers, reducers } from './core/store';
 import { CoreModule } from './core/core.module';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from 'src/environments/environment';
+import { environment } from '@environment';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,7 +31,7 @@ import { environment } from 'src/environments/environment';
         deps: [HttpClient],
       },
     }),
-    CoreModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent],
