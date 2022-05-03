@@ -2,7 +2,7 @@
  * File: index.ts
  * Project: sidequest-xp
  * Created: Tuesday, 3rd May 2022 8:20:40 am
- * Last Modified: Tuesday, 3rd May 2022 8:53:17 am
+ * Last Modified: Tuesday, 3rd May 2022 8:03:32 pm
  * Copyright © 2022 Sidequest XP
  */
 
@@ -13,9 +13,9 @@ import {
 } from '@ngrx/store';
 
 import { MetaReducer } from '@ngrx/store';
-import { environment } from '../../../environments/environment';
+import { environment } from '@environment';
 
-import * as fromProduct from './product/product.reducer';
+import * as fromProduct from './product/reducer/product.reducer';
 
 export interface State {
   products: fromProduct.State;

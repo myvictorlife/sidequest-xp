@@ -17,6 +17,14 @@ The psioniq File Header VSCode Extension will insert a header into the current d
 - Last Modified: Tuesday, 4th May 2022 8:21:52 am
 - Copyright © 2022 Sidequest XP
 
+## Paths
+
+    $ @sidequest-xp-store // Sidequest XP Store
+    $ @sidequest-xp-components // Sidequest XP Compontentes
+    $ @sidequest-xp-pages // Sidequest XP Pages
+    $ @sidequest-xp-shared // Services / ...
+    $ @environment // Configuration (project, languages, hosts, ...)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
