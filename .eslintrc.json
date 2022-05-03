@@ -1,24 +1,30 @@
 {
   "root": true,
-  "ignorePatterns": [
-    "projects/**/*"
-  ],
   "overrides": [
     {
-      "files": [
-        "*.ts"
-      ],
+      "files": ["*.js"],
       "parserOptions": {
-        "project": [
-          "tsconfig.json"
-        ],
+        "ecmaVersion": 2018
+      }
+    },
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": ["tsconfig.*?.json"],
         "createDefaultProgram": true
       },
       "extends": [
         "plugin:@angular-eslint/recommended",
-        "plugin:@angular-eslint/template/process-inline-templates"
+        "plugin:@typescript-eslint/recommended",
+        "prettier"
       ],
       "rules": {
+        "@angular-eslint/component-class-suffix": [
+          "error",
+          {
+            "suffixes": ["Component", "Page"]
+          }
+        ],
         "@angular-eslint/directive-selector": [
           "error",
           {
@@ -29,22 +35,17 @@
         ],
         "@angular-eslint/component-selector": [
           "error",
-          {
-            "type": "element",
-            "prefix": "sidequest-xp",
-            "style": "kebab-case"
-          }
+          { "type": "element", "prefix": "sidequest-xp", "style": "kebab-case" }
         ]
       }
     },
     {
-      "files": [
-        "*.html"
-      ],
-      "extends": [
-        "plugin:@angular-eslint/template/recommended"
-      ],
-      "rules": {}
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended"]
+    },
+    {
+      "files": ["*.component.ts"],
+      "extends": ["plugin:@angular-eslint/template/process-inline-templates"]
     }
   ]
 }

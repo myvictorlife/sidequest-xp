@@ -9,16 +9,13 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-import { reducers, metaReducers } from './core/store';
+import { metaReducers, reducers } from './core/store';
 import { CoreModule } from './core/core.module';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 
-
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -30,15 +27,15 @@ import { environment } from 'src/environments/environment';
       loader: {
         provide: TranslateLoader,
         useFactory: httpTranslateLoader,
-        deps: [HttpClient]
-      }
+        deps: [HttpClient],
+      },
     }),
-    CoreModule
+    CoreModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
 
 // AOT compilation support
 export function httpTranslateLoader(http: HttpClient) {

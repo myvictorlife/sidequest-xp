@@ -1,19 +1,18 @@
 {
-    "psi-header.variables": [["projectCreationYear", "2022"]],
-    "psi-header.templates": [
-      {
-        "language": "*",
-        "template": [
-          "File: <<filename>>",
-          "Project: <<projectname>>",
-          "Created: <<filecreated('dddd, Do MMMM YYYY h:mm:ss a')>>",
-          "Last Modified: <<dateformat('dddd, Do MMMM YYYY h:mm:ss a')>>",
-          "Copyright © <<projectCreationYear>> Sidequest XP"
-        ]
-      }
-    ],
-    "psi-header.config": { "forceToTop": true, "blankLinesAfter": 1 },
-    "psi-header.changes-tracking": { "isActive": true },
-    "editor.codeActionsOnSave": null
-  }
-  
+  "psi-header.variables": [["projectCreationYear", "2022"]],
+  "psi-header.templates": [
+    {
+      "language": "*",
+      "template": [
+        "File: <<filename>>",
+        "Project: <<projectname>>",
+        "Created: <<filecreated('dddd, Do MMMM YYYY h:mm:ss a')>>",
+        "Last Modified: <<dateformat('dddd, Do MMMM YYYY h:mm:ss a')>>",
+        "Copyright © <<projectCreationYear>> Sidequest XP"
+      ]
+    }
+  ],
+  "psi-header.config": { "forceToTop": true, "blankLinesAfter": 1 },
+  "psi-header.changes-tracking": { "isActive": true },
+  "editor.codeActionsOnSave": null
+}
