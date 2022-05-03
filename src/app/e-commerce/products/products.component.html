@@ -1,8 +1,5 @@
-<p>products works!</p>
-<br />
-<p>products works!</p>
-<br />
-
-<sidequest-xp-product></sidequest-xp-product>
-
-{{ products$ | async | json }}
+<div fxLayout="row wrap" fxLayoutAlign="space-evenly stretch" class="products">
+  <div *ngFor="let product of products$ | async" style="margin-bottom: 10px">
+    <sidequest-xp-product [product]="product"></sidequest-xp-product>
+  </div>
+</div>

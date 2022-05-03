@@ -13,6 +13,7 @@ import { metaReducers, reducers } from './core/store';
 import { CoreModule } from './core/core.module';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '@environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,6 +32,7 @@ import { environment } from '@environment';
       },
     }),
     CoreModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

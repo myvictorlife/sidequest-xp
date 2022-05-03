@@ -2,7 +2,7 @@
  * File: products.component.spec.ts
  * Project: sidequest-xp
  * Created: Tuesday, 3rd May 2022 7:18:04 pm
- * Last Modified: Tuesday, 3rd May 2022 8:12:07 pm
+ * Last Modified: Tuesday, 3rd May 2022 10:11:49 pm
  * Copyright © 2022 Sidequest XP
  */
 
