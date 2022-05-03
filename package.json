@@ -10,12 +10,11 @@
     "test:coverage": "jest --coverage",
     "test:coverage:silent": "npx jest --silent --ci --coverage --coverageReporters='text' --coverageReporters='text-summary'",
     "deploy": "npm run build --prod && firebase deploy",
-    "lint": "ng lint",
-    "build:ci": "npm run clean && npm run test && npm run build"
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~13.0.0",
+    "@angular/animations": "~13.0P.0",
     "@angular/common": "~13.0.0",
     "@angular/compiler": "~13.0.0",
     "@angular/core": "~13.0.0",
