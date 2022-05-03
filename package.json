@@ -10,7 +10,8 @@
     "test:coverage": "jest --coverage",
     "test:coverage:silent": "npx jest --silent --ci --coverage --coverageReporters='text' --coverageReporters='text-summary'",
     "deploy": "npm run build --prod && firebase deploy",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "build:ci": "npm run clean && npm run test && npm run build"
   },
   "private": true,
   "dependencies": {
