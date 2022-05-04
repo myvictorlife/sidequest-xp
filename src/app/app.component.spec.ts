@@ -1,4 +1,11 @@
-import { TestBed } from '@angular/core/testing';
+/*
+ * File: app.component.spec.ts
+ * Project: sidequest-xp
+ * Created: Tuesday, 3rd May 2022 12:53:34 pm
+ * Last Modified: Wednesday, 4th May 2022 12:30:17 pm
+ * Copyright © 2022 Sidequest XP
+ */
+
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import {
@@ -7,31 +14,34 @@ import {
   TranslateModule,
 } from '@ngx-translate/core';
 
+import { Spectator, createComponentFactory } from '@ngneat/spectator';
+
 describe('AppComponent', () => {
+  let spectator: Spectator<AppComponent>;
+
+  const createComponent = createComponentFactory({
+    component: AppComponent,
+    imports: [
+      RouterTestingModule,
+      TranslateModule.forRoot({
+        loader: {
+          provide: TranslateLoader,
+          useClass: TranslateFakeLoader,
+        },
+      }),
+    ],
+  });
+
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule,
-        TranslateModule.forRoot({
-          loader: {
-            provide: TranslateLoader,
-            useClass: TranslateFakeLoader,
-          },
-        }),
-      ],
-      declarations: [AppComponent],
-    }).compileComponents();
+    spectator = createComponent();
   });
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    expect(spectator).toBeTruthy();
   });
 
   it(`should have as title 'sidequest-xp'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('sidequest-xp');
+    const title = spectator.component.title;
+    expect(title).toEqual('sidequest-xp');
   });
 });

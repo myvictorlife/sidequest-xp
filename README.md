@@ -33,8 +33,9 @@ The psioniq File Header VSCode Extension will insert a header into the current d
     $ @ngx-translate // Text Translations
     $ @angular/material // Material Design components for Angular
     $ @angular/flex-layout // Angular Flex Layout provides a sophisticated layout API using Flexbox CSS + mediaQuery.
-    $ jest // Unit Tests
     $ rxjs // RxJS is a library for reactive programming using Observables
+    $ jest // Unit Tests
+    $ Spectator // Spectator helps you get rid of all the boilerplate grunt work, leaving you with readable, sleek and streamlined unit tests.
     $ Prettier // Prettier is an opinionated code formatter that helps us beautify code in a standardized way every time we save the code.
 
 ## Development server

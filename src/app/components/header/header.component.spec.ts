@@ -2,46 +2,44 @@
  * File: header.component.spec.ts
  * Project: sidequest-xp
  * Created: Tuesday, 3rd May 2022 7:10:24 pm
- * Last Modified: Tuesday, 3rd May 2022 8:25:44 pm
+ * Last Modified: Wednesday, 4th May 2022 12:06:23 pm
  * Copyright © 2022 Sidequest XP
  */
 
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { HeaderComponent } from './header.component';
+import {
+  TranslateModule,
+  TranslateLoader,
+  TranslateFakeLoader,
+} from '@ngx-translate/core';
+import { createComponentFactory, Spectator } from '@ngneat/spectator';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatBadgeModule } from '@angular/material/badge';
 
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { Observable, of } from 'rxjs';
-class FakeLoader implements TranslateLoader {
-  getTranslation(): Observable<any> {
-    return of({ test: 'This is a Fake translate' });
-  }
-}
 describe('HeaderComponent', () => {
-  let component: HeaderComponent;
-  let fixture: ComponentFixture<HeaderComponent>;
+  let spectator: Spectator<HeaderComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [HeaderComponent],
-      imports: [
-        TranslateModule.forRoot({
-          loader: {
-            provide: TranslateLoader,
-            useClass: FakeLoader,
-          },
-        }),
-      ],
-    }).compileComponents();
+  const createComponent = createComponentFactory({
+    component: HeaderComponent,
+    imports: [
+      MatToolbarModule,
+      MatIconModule,
+      MatBadgeModule,
+      TranslateModule.forRoot({
+        loader: {
+          provide: TranslateLoader,
+          useClass: TranslateFakeLoader,
+        },
+      }),
+    ],
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeaderComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    spectator = createComponent();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(spectator).toBeTruthy();
   });
 });
