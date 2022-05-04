@@ -1,24 +1,26 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+/*
+ * File: product-details.component.spec.ts
+ * Project: sidequest-xp
+ * Created: Wednesday, 4th May 2022 8:12:27 am
+ * Last Modified: Wednesday, 4th May 2022 12:14:53 pm
+ * Copyright © 2022 Sidequest XP
+ */
 
 import { ProductDetailsComponent } from './product-details.component';
+import { createComponentFactory, Spectator } from '@ngneat/spectator';
 
 describe('ProductDetailsComponent', () => {
-  let component: ProductDetailsComponent;
-  let fixture: ComponentFixture<ProductDetailsComponent>;
+  let spectator: Spectator<ProductDetailsComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ProductDetailsComponent],
-    }).compileComponents();
+  const createComponent = createComponentFactory({
+    component: ProductDetailsComponent,
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProductDetailsComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    spectator = createComponent();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(spectator).toBeTruthy();
   });
 });
