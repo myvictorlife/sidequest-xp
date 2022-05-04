@@ -10,7 +10,9 @@
     <p>R$ {{ product.price }}</p>
   </mat-card-content>
   <mat-card-actions fxLayout="row" fxLayoutAlign="space-between center">
-    <button mat-button>BUY</button>
+    <button mat-button (click)="redirectToProductDetails(product.id)">
+      BUY
+    </button>
     <button mat-button>SHARE</button>
   </mat-card-actions>
 </mat-card>

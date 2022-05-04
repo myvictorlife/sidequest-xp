@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { selectAllProducts } from '@sidequest-xp-core/store';
 import * as fromProduct from '@sidequest-xp-core/store/product/actions/product.actions';
+import { selectAllProducts } from '@sidequest-xp-store/product/selectors/product.selectors';
 
 @Component({
   selector: 'sidequest-xp-products',

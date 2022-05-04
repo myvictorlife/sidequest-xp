@@ -2,12 +2,12 @@
  * File: product.reducer.ts
  * Project: sidequest-xp
  * Created: Tuesday, 3rd May 2022 8:12:16 am
- * Last Modified: Tuesday, 3rd May 2022 7:32:57 pm
+ * Last Modified: Wednesday, 4th May 2022 5:09:55 pm
  * Copyright © 2022 Sidequest XP
  */
 
 import { createReducer, on } from '@ngrx/store';
-import { loadSuccess } from '../actions/product.actions';
+import { loadSuccess, setSelectedProductId } from '../actions/product.actions';
 import { EntityAdapter, EntityState, createEntityAdapter } from '@ngrx/entity';
 import { Product } from '../models/product.models';
 
@@ -25,7 +25,11 @@ export const initialState: State = adapter.getInitialState({
 
 export const reducer = createReducer(
   initialState,
-  on(loadSuccess, (state, { products }) => adapter.addMany(products, state))
+  on(loadSuccess, (state, { products }) => adapter.addMany(products, state)),
+  on(setSelectedProductId, (state, { selectedProductId }) => ({
+    ...state,
+    selectedProductId,
+  }))
 );
 
 export const getSelectedProductId = (state: State) => state.selectedProductId;
