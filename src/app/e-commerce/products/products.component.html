@@ -1,5 +1,5 @@
-<div fxLayout="row wrap" fxLayoutAlign="space-evenly stretch" class="products">
-  <div *ngFor="let product of products$ | async" style="margin-bottom: 10px">
+<div fxLayout="row wrap" fxLayoutAlign="start" fxLayoutGap="10px grid">
+  <div *ngFor="let product of products$ | async">
     <sidequest-xp-product [product]="product"></sidequest-xp-product>
   </div>
 </div>
