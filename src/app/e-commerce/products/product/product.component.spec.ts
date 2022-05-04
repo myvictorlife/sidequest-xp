@@ -18,7 +18,6 @@ import { provideMockStore } from '@ngrx/store/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MatCardModule } from '@angular/material/card';
 describe('ProductComponent', () => {
-
   let spectator: Spectator<ProductComponent>;
 
   let initialState: any;
