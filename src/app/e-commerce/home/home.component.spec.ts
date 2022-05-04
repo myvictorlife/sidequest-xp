@@ -2,7 +2,7 @@
  * File: home.component.spec.ts
  * Project: sidequest-xp
  * Created: Tuesday, 3rd May 2022 6:46:01 pm
- * Last Modified: Tuesday, 3rd May 2022 8:27:48 pm
+ * Last Modified: Wednesday, 4th May 2022 7:16:39 am
  * Copyright © 2022 Sidequest XP
  */
 
@@ -15,7 +15,7 @@ import { provideMockStore } from '@ngrx/store/testing';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { Observable, of } from 'rxjs';
 import { ProductsComponent } from '../products/products.component';
-import { ProductComponent } from '../product/product.component';
+import { ProductComponent } from '../products/product/product.component';
 class FakeLoader implements TranslateLoader {
   getTranslation(): Observable<any> {
     return of({ test: 'This is a Fake translate' });
