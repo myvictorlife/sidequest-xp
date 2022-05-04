@@ -25,6 +25,18 @@ The psioniq File Header VSCode Extension will insert a header into the current d
     $ @sidequest-xp-shared // Services / ...
     $ @environment // Configuration (project, languages, hosts, ...)
 
+## Tools
+
+    $ @ngrx/store // State Management
+    $ @ngrx/effects // Side effect model for Store
+    $ @ngrx/entity // Entity State adapter for managing record collections.
+    $ @ngx-translate // Text Translations
+    $ @angular/material // Material Design components for Angular
+    $ @angular/flex-layout // Angular Flex Layout provides a sophisticated layout API using Flexbox CSS + mediaQuery.
+    $ jest // Unit Tests
+    $ rxjs // RxJS is a library for reactive programming using Observables
+    $ Prettier // Prettier is an opinionated code formatter that helps us beautify code in a standardized way every time we save the code.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
