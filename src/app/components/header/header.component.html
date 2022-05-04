@@ -8,7 +8,11 @@
     />
     <span class="header-spacer"></span>
     <p>
-      <mat-icon class="shopping_cart" matBadge="5" matBadgeColor="warn"
+      <mat-icon
+        class="shopping_cart"
+        matBadge="5"
+        matBadgeColor="warn"
+        (click)="redirectToCart()"
         >shopping_cart</mat-icon
       >
       <!-- Include text description of the icon's meaning for screen-readers -->

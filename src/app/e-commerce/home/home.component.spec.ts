@@ -2,7 +2,7 @@
  * File: home.component.spec.ts
  * Project: sidequest-xp
  * Created: Tuesday, 3rd May 2022 6:46:01 pm
- * Last Modified: Wednesday, 4th May 2022 12:11:33 pm
+ * Last Modified: Wednesday, 4th May 2022 6:17:02 pm
  * Copyright © 2022 Sidequest XP
  */
 
@@ -19,6 +19,7 @@ import {
 
 import { ProductsComponent } from '../products/products.component';
 import { createComponentFactory, Spectator } from '@ngneat/spectator';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('HomeComponent', () => {
   let spectator: Spectator<HomeComponent>;
@@ -28,6 +29,7 @@ describe('HomeComponent', () => {
   const createComponent = createComponentFactory({
     component: HomeComponent,
     imports: [
+      RouterTestingModule,
       ComponentsModule,
       TranslateModule.forRoot({
         loader: {
