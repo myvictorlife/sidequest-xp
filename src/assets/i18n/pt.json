@@ -1,3 +1,7 @@
 {
-  "PROJECT_NAME": "Sidequest XP (PT)"
+  "PROJECT_NAME": "Sidequest XP (PT)",
+  "HEADER": {
+    "ENGLISH": "Inglês",
+    "PORTUGUESE": "Português"
+  }
 }

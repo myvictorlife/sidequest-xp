@@ -1,5 +1,14 @@
-<div fxLayout="row wrap" fxLayoutAlign="start" fxLayoutGap="10px grid">
-  <div *ngFor="let product of products$ | async">
+<div
+  fxLayout="row wrap"
+  fxLayoutAlign="start"
+  fxLayoutGap="10px grid"
+  fxLayout.xs="column"
+  fxLayoutAlign.xs="center center"
+>
+  <div
+    *ngFor="let product of products$ | async"
+    style="max-height: 250px; max-width: 250px"
+  >
     <sidequest-xp-product [product]="product"></sidequest-xp-product>
   </div>
 </div>
