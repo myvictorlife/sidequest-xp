@@ -2,7 +2,7 @@
  * File: e-commerce.module.ts
  * Project: sidequest-xp
  * Created: Tuesday, 3rd May 2022 6:43:58 pm
- * Last Modified: Thursday, 5th May 2022 9:10:48 am
+ * Last Modified: Thursday, 5th May 2022 4:41:05 pm
  * Copyright © 2022 Sidequest XP
  */
 
@@ -20,7 +20,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductDetailsService } from './product-details/product-details.service';
-import { CartService } from './cart/cart.service';
+import { SharedModule } from '@sidequest-xp-shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,8 @@ import { CartService } from './cart/cart.service';
     FlexLayoutModule,
     MatCardModule,
     MatButtonModule,
+    SharedModule,
   ],
-  providers: [ProductDetailsService, CartService],
+  providers: [ProductDetailsService],
 })
 export class ECommerceModule {}

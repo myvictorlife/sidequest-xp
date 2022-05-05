@@ -2,7 +2,7 @@
  * File: cart.effects.ts
  * Project: sidequest-xp
  * Created: Wednesday, 4th May 2022 10:23:14 pm
- * Last Modified: Thursday, 5th May 2022 9:19:37 am
+ * Last Modified: Thursday, 5th May 2022 1:50:56 pm
  * Copyright © 2022 Sidequest XP
  */
 
@@ -21,7 +21,7 @@ export class CartEffects {
       ofType(fromCart.addItemToCart),
       withLatestFrom(this.store.select(selectCurrentShoppingCart)),
       switchMap(([item, shoppingCart]) => {
-        const product = item.product;
+        const product = JSON.parse(JSON.stringify(item.product));
         const shoppingCartLatest = shoppingCart
           ? JSON.parse(JSON.stringify(shoppingCart))
           : this.shoppingCartService.createShoppingCart();
@@ -39,7 +39,7 @@ export class CartEffects {
       ofType(fromCart.removeItemFromCart),
       withLatestFrom(this.store.select(selectCurrentShoppingCart)),
       switchMap(([item, shoppingCart]) => {
-        const product = item.product;
+        const product = JSON.parse(JSON.stringify(item.product));
         const shoppingCartLatest = shoppingCart
           ? JSON.parse(JSON.stringify(shoppingCart))
           : this.shoppingCartService.createShoppingCart();

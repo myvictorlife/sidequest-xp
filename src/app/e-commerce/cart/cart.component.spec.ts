@@ -2,7 +2,7 @@
  * File: cart.component.spec.ts
  * Project: sidequest-xp
  * Created: Wednesday, 4th May 2022 5:49:19 pm
- * Last Modified: Thursday, 5th May 2022 9:28:22 am
+ * Last Modified: Thursday, 5th May 2022 4:41:59 pm
  * Copyright © 2022 Sidequest XP
  */
 
@@ -17,7 +17,7 @@ import {
   TranslateLoader,
   TranslateFakeLoader,
 } from '@ngx-translate/core';
-import { CartService } from './cart.service';
+import { SharedModule } from '@sidequest-xp-shared/shared.module';
 describe('CartComponent', () => {
   let spectator: Spectator<CartComponent>;
 
@@ -34,9 +34,9 @@ describe('CartComponent', () => {
           useClass: TranslateFakeLoader,
         },
       }),
+      SharedModule,
     ],
     providers: [
-      CartService,
       provideMockStore({
         initialState,
       }),

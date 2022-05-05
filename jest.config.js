@@ -6,7 +6,7 @@ module.exports = {
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/dist/'],
   coverageThreshold: {
     global: {
-      branches: 9,
+      branches: 8,
       functions: 15,
       lines: 30,
       statements: 39,

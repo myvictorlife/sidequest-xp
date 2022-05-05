@@ -19,6 +19,12 @@
         <div class="description">
           <span>{{ product.name }}</span>
           <span>{{ product.description }}</span>
+          <span>
+            min: {{ product.qty > product.minQty }}<br />
+            max: {{ product.qty <= product.maxQty }} <br />
+            min {{ product.minQty }} - max {{ product.maxQty }} - qty
+            {{ product.qty }}
+          </span>
         </div>
 
         <div class="quantity">
@@ -27,26 +33,28 @@
             (click)="addItem(product)"
             type="button"
             name="button"
+            [disabled]="checkMaxQty(product)"
           >
             <img
               src="https://designmodo.com/demo/shopping-cart/plus.svg"
               alt=""
             />
           </button>
-          <input
-            type="text"
+          <input type="text" name="name" value="{{ product.qty }}" />
+          <button
+            class="minus-btn"
+            type="button"
+            name="button"
             (click)="removeItem(product)"
-            name="name"
-            value="1"
-          />
-          <button class="minus-btn" type="button" name="button">
+            [disabled]="checkMaxQty(product)"
+          >
             <img
               src="https://designmodo.com/demo/shopping-cart/minus.svg"
               alt=""
             />
           </button>
         </div>
-        <div class="total-price">{{ product.price }}</div>
+        <div class="total-price">{{ +product.price * product.qty }}</div>
       </div>
     </div>
   </div>

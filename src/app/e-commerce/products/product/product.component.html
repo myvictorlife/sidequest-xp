@@ -10,7 +10,7 @@
     <p>R$ {{ product.price }}</p>
   </mat-card-content>
   <mat-card-actions fxLayout="row" fxLayoutAlign="space-between center">
-    <button mat-raised-button color="warn">
+    <button mat-raised-button color="warn" (click)="addItem(product)">
       {{ 'PRODUCT.ADD_TO_CART' | translate }}
     </button>
     <button
