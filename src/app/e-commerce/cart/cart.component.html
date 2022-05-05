@@ -1,2 +1,53 @@
-<sidequest-xp-header></sidequest-xp-header>
-<p>cart works!</p>
+<!-- {{ selectShoppingCart$ | async | json }} -->
+<div class="content" style="background: #c22ed0; height: 100%">
+  <sidequest-xp-header></sidequest-xp-header>
+  <div class="shopping-cart">
+    <!-- Title -->
+    <div class="title">
+      {{ 'CART.SHOPPING_BAG' | translate }}
+    </div>
+
+    <div *ngIf="!shoppingCart" fxLayout="row" fxLayoutAlign="center center">
+      {{ 'CART.SHOPPING_CART_EMPTY' | translate }}
+    </div>
+    <div *ngFor="let product of shoppingCart?.products">
+      <div class="item">
+        <div class="image">
+          <img [src]="product?.image" alt="" />
+        </div>
+
+        <div class="description">
+          <span>{{ product.name }}</span>
+          <span>{{ product.description }}</span>
+        </div>
+
+        <div class="quantity">
+          <button
+            class="plus-btn"
+            (click)="addItem(product)"
+            type="button"
+            name="button"
+          >
+            <img
+              src="https://designmodo.com/demo/shopping-cart/plus.svg"
+              alt=""
+            />
+          </button>
+          <input
+            type="text"
+            (click)="removeItem(product)"
+            name="name"
+            value="1"
+          />
+          <button class="minus-btn" type="button" name="button">
+            <img
+              src="https://designmodo.com/demo/shopping-cart/minus.svg"
+              alt=""
+            />
+          </button>
+        </div>
+        <div class="total-price">{{ product.price }}</div>
+      </div>
+    </div>
+  </div>
+</div>

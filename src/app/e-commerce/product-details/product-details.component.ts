@@ -2,7 +2,7 @@
  * File: product-details.component.ts
  * Project: sidequest-xp
  * Created: Wednesday, 4th May 2022 7:21:30 am
- * Last Modified: Wednesday, 4th May 2022 10:33:36 pm
+ * Last Modified: Thursday, 5th May 2022 8:51:42 am
  * Copyright © 2022 Sidequest XP
  */
 
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Product } from '@sidequest-xp-store/product/models/product.models';
 import { selectCurrentProduct } from '@sidequest-xp-store/product/selectors/product.selectors';
-import * as fromCart from '@sidequest-xp-core/store/cart/actions/cart.actions';
+import { ProductDetailsService } from './product-details.service';
 
 @Component({
   selector: 'sidequest-xp-product-details',
@@ -21,9 +21,17 @@ import * as fromCart from '@sidequest-xp-core/store/cart/actions/cart.actions';
 export class ProductDetailsComponent implements OnInit {
   productSelected$ = this.store.select(selectCurrentProduct);
   product = {} as Product;
-  constructor(private store: Store, private router: Router) {}
+  constructor(
+    private store: Store,
+    private router: Router,
+    private productDetailsService: ProductDetailsService
+  ) {}
 
   ngOnInit(): void {
+    this.checkIfTheProductExists();
+  }
+
+  checkIfTheProductExists() {
     this.productSelected$.subscribe((product) => {
       if (!product) {
         this.router.navigate(['e-commerce']);
@@ -34,6 +42,14 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   addItemToCart(product: Product) {
-    this.store.dispatch(fromCart.addItemToCart({ product }));
+    this.productDetailsService.addItemToCart(product);
   }
+
+  removeItemToCart(product: Product) {
+    this.productDetailsService.removeItemFromCart(product);
+  }
+
+  // ngOnDestroy(): void {
+  //   this.subscriptions.unsubscribe();
+  // }
 }

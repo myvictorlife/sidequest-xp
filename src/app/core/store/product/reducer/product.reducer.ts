@@ -2,7 +2,7 @@
  * File: product.reducer.ts
  * Project: sidequest-xp
  * Created: Tuesday, 3rd May 2022 8:12:16 am
- * Last Modified: Wednesday, 4th May 2022 5:09:55 pm
+ * Last Modified: Thursday, 5th May 2022 7:11:19 am
  * Copyright © 2022 Sidequest XP
  */
 
@@ -38,14 +38,14 @@ export const getSelectedProductId = (state: State) => state.selectedProductId;
 const { selectIds, selectEntities, selectAll, selectTotal } =
   adapter.getSelectors();
 
-// select the array of user ids
+// select the array of product ids
 export const selectProductIds = selectIds;
 
-// select the dictionary of user entities
+// select the dictionary of product entities
 export const selectProductEntities = selectEntities;
 
-// select the array of users
+// select the array of products
 export const selectAllProducts = selectAll;
 
-// select the total user count
+// select the total product count
 export const selectProductTotal = selectTotal;

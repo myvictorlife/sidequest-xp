@@ -3,5 +3,16 @@
   "HEADER": {
     "ENGLISH": "Inglês",
     "PORTUGUESE": "Português"
+  },
+  "PRODUCT": {
+    "ADD_TO_CART": "Adicionar no Carrinho",
+    "DETAILS": "Detalhes"
+  },
+  "PRODUCT_DETAILS": {
+    "ADD_TO_CART": "Adicionar no Carrinho"
+  },
+  "CART": {
+    "SHOPPING_BAG": "Carrinho de Compras",
+    "SHOPPING_CART_EMPTY": "Seu carrinho está vazio."
   }
 }

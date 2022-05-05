@@ -2,7 +2,7 @@
  * File: cart.actions.ts
  * Project: sidequest-xp
  * Created: Wednesday, 4th May 2022 10:06:18 pm
- * Last Modified: Wednesday, 4th May 2022 10:27:01 pm
+ * Last Modified: Thursday, 5th May 2022 8:50:11 am
  * Copyright © 2022 Sidequest XP
  */
 
@@ -12,6 +12,11 @@ import { ShoppingCart } from '../models/cart.model';
 
 export const addItemToCart = createAction(
   '[Cart] Add Item to Cart',
+  props<{ product: Product }>()
+);
+
+export const removeItemFromCart = createAction(
+  '[Cart] Remove Item From Cart',
   props<{ product: Product }>()
 );
 
