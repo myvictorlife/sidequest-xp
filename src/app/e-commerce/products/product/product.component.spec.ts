@@ -2,7 +2,7 @@
  * File: product.component.spec.ts
  * Project: sidequest-xp
  * Created: Tuesday, 3rd May 2022 9:14:18 pm
- * Last Modified: Wednesday, 4th May 2022 6:05:11 pm
+ * Last Modified: Thursday, 5th May 2022 4:41:33 pm
  * Copyright © 2022 Sidequest XP
  */
 
@@ -17,6 +17,7 @@ import {
 import { provideMockStore } from '@ngrx/store/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MatCardModule } from '@angular/material/card';
+import { SharedModule } from '@sidequest-xp-shared/shared.module';
 describe('ProductComponent', () => {
   let spectator: Spectator<ProductComponent>;
 
@@ -33,6 +34,7 @@ describe('ProductComponent', () => {
           useClass: TranslateFakeLoader,
         },
       }),
+      SharedModule,
     ],
     providers: [
       provideMockStore({

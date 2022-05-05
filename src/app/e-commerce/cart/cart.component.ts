@@ -2,15 +2,51 @@
  * File: cart.component.ts
  * Project: sidequest-xp
  * Created: Wednesday, 4th May 2022 5:49:19 pm
- * Last Modified: Wednesday, 4th May 2022 5:56:34 pm
+ * Last Modified: Thursday, 5th May 2022 4:40:10 pm
  * Copyright © 2022 Sidequest XP
  */
 
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { ShoppingCartService } from '@sidequest-xp-shared/shopping-cart/shopping-cart.service';
+import { ShoppingCart } from '@sidequest-xp-store/cart/models/cart.model';
+import { selectCurrentShoppingCart } from '@sidequest-xp-store/cart/selectors/cart.selectors';
+import { Product } from '@sidequest-xp-store/product/models/product.models';
 
 @Component({
   selector: 'sidequest-xp-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.scss'],
 })
-export class CartComponent {}
+export class CartComponent implements OnInit {
+  selectShoppingCart$ = this.store.select(selectCurrentShoppingCart);
+  shoppingCart: ShoppingCart | undefined;
+  constructor(
+    private store: Store,
+    private shoppingCartService: ShoppingCartService
+  ) {}
+
+  ngOnInit(): void {
+    this.selectShoppingCart$.subscribe((shoppingCart) => {
+      if (!!shoppingCart) {
+        this.shoppingCart = shoppingCart;
+      }
+    });
+  }
+
+  addItem(product: Product) {
+    this.shoppingCartService.addItemToCart(product);
+  }
+
+  removeItem(product: Product) {
+    this.shoppingCartService.removeItemFromCart(product);
+  }
+
+  checkMaxQty(product: Product) {
+    return this.shoppingCartService.checkMaxQty(product);
+  }
+
+  checkMinQty(product: Product) {
+    return this.shoppingCartService.checkMinQty(product);
+  }
+}
