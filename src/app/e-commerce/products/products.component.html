@@ -4,11 +4,13 @@
   fxLayoutGap="10px grid"
   fxLayout.xs="column"
   fxLayoutAlign.xs="center center"
+  style="width: 80%; height: 80%; margin: auto"
 >
-  <div
-    *ngFor="let product of products$ | async"
-    style="max-height: 250px; max-width: 250px"
-  >
-    <sidequest-xp-product [product]="product"></sidequest-xp-product>
-  </div>
+  <ng-container *ngFor="let product of products$ | async">
+    <sidequest-xp-product
+      fxFlex.lg="25"
+      style="flex: 1 1 0px"
+      [product]="product"
+    ></sidequest-xp-product>
+  </ng-container>
 </div>
