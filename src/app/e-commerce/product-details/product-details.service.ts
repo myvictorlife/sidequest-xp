@@ -2,14 +2,14 @@
  * File: product-details.service.ts
  * Project: sidequest-xp
  * Created: Thursday, 5th May 2022 8:48:02 am
- * Last Modified: Thursday, 5th May 2022 8:51:48 am
+ * Last Modified: Friday, 6th May 2022 4:11:18 pm
  * Copyright © 2022 Sidequest XP
  */
 
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { Product } from '@sidequest-xp-store/product/models/product.models';
 import * as fromCart from '@sidequest-xp-core/store/cart/actions/cart.actions';
+import { Product } from '@sidequest-xp-store/models/product.models';
 
 @Injectable()
 export class ProductDetailsService {

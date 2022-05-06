@@ -2,11 +2,11 @@
  * File: product.action.ts
  * Project: sidequest-xp
  * Created: Tuesday, 3rd May 2022 8:10:11 am
- * Last Modified: Wednesday, 4th May 2022 5:09:10 pm
+ * Last Modified: Friday, 6th May 2022 4:11:59 pm
  * Copyright © 2022 Sidequest XP
  */
 import { createAction, props } from '@ngrx/store';
-import { Product } from '../models/product.models';
+import { Product } from '../../models/product.models';
 
 export const loadAllProducts = createAction('[Product] Load Products');
 

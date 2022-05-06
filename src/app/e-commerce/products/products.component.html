@@ -8,6 +8,7 @@
 >
   <ng-container *ngFor="let product of products$ | async">
     <sidequest-xp-product
+      *ngIf="filterByCategory(product)"
       fxFlex.lg="25"
       style="flex: 1 1 0px"
       [product]="product"
