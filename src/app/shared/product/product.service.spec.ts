@@ -2,7 +2,7 @@
  * File: product-details.component.spec.ts
  * Project: sidequest-xp
  * Created: Wednesday, 4th May 2022 8:12:27 am
- * Last Modified: Wednesday, 4th May 2022 12:46:43 pm
+ * Last Modified: Friday, 6th May 2022 5:20:11 pm
  * Copyright © 2022 Sidequest XP
  */
 
@@ -49,7 +49,7 @@ describe('ProductService', () => {
       expect(spyGet).toHaveBeenCalledWith(
         'http://localhost:5001/sidequest-xp/us-central1/products'
       );
-      expect(products.length).toEqual(1);
+      expect(products.products.length).toEqual(1);
     });
   });
 });

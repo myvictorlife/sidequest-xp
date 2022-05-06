@@ -2,14 +2,14 @@
  * File: product-details.component.ts
  * Project: sidequest-xp
  * Created: Wednesday, 4th May 2022 7:21:30 am
- * Last Modified: Thursday, 5th May 2022 8:51:42 am
+ * Last Modified: Friday, 6th May 2022 4:11:03 pm
  * Copyright © 2022 Sidequest XP
  */
 
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { Product } from '@sidequest-xp-store/product/models/product.models';
+import { Product } from '@sidequest-xp-store/models/product.models';
 import { selectCurrentProduct } from '@sidequest-xp-store/product/selectors/product.selectors';
 import { ProductDetailsService } from './product-details.service';
 

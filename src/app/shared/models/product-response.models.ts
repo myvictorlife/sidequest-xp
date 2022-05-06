@@ -2,14 +2,18 @@
  * File: product-response.models.ts
  * Project: sidequest-xp
  * Created: Tuesday, 3rd May 2022 5:26:45 pm
- * Last Modified: Thursday, 5th May 2022 1:20:39 pm
+ * Last Modified: Friday, 6th May 2022 4:25:55 pm
  * Copyright © 2022 Sidequest XP
  */
 
-import { Product } from '@sidequest-xp-store/product/models/product.models';
+import { ProductCategory } from '@sidequest-xp-store/models/product-category.models';
+import { Product } from '@sidequest-xp-store/models/product.models';
 
 export interface ProductResponse {
-  data: {
-    products: Product[];
-  };
+  data: ProductDataResponse;
+}
+
+export interface ProductDataResponse {
+  category: ProductCategory[];
+  products: Product[];
 }

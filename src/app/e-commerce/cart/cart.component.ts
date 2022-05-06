@@ -2,16 +2,16 @@
  * File: cart.component.ts
  * Project: sidequest-xp
  * Created: Wednesday, 4th May 2022 5:49:19 pm
- * Last Modified: Thursday, 5th May 2022 4:40:10 pm
+ * Last Modified: Friday, 6th May 2022 4:13:15 pm
  * Copyright © 2022 Sidequest XP
  */
 
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { ShoppingCartService } from '@sidequest-xp-shared/shopping-cart/shopping-cart.service';
-import { ShoppingCart } from '@sidequest-xp-store/cart/models/cart.model';
+import { ShoppingCart } from '@sidequest-xp-store/models/cart.model';
 import { selectCurrentShoppingCart } from '@sidequest-xp-store/cart/selectors/cart.selectors';
-import { Product } from '@sidequest-xp-store/product/models/product.models';
+import { Product } from '@sidequest-xp-store/models/product.models';
 
 @Component({
   selector: 'sidequest-xp-cart',
