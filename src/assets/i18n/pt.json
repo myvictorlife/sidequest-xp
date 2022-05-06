@@ -13,6 +13,7 @@
   },
   "CART": {
     "SHOPPING_BAG": "Carrinho de Compras",
-    "SHOPPING_CART_EMPTY": "Seu carrinho está vazio."
+    "SHOPPING_CART_EMPTY": "Seu carrinho está vazio.",
+    "TOTAL": "Total"
   }
 }
