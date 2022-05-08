@@ -5,6 +5,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
 
+The application should include the following features:
+
+Flow listing:
+Lists all products coming from the backend by category and it is possible to add the product to the cart.
+
+Cart flow:
+Shows the items in the cart, being able to increase or decrease the quantity and when it is confirmed, send the items to the backend.
+
+##  Config Environments
+baseURL: 'https://us-central1-sidequest-xp.cloudfunctions.net'
+
 ## Configure psioniq File Header [LINK](https://marketplace.visualstudio.com/items?itemName=psioniq.psi-header)
 
 The psioniq File Header VSCode Extension will insert a header into the current document - either at the start of the document or at the current cursor position. The header can be configured globally and/or per language. However, the configuration separates the comment syntax from the template body so it is likely that a single template will be able to cover most languages.
@@ -37,6 +48,31 @@ The psioniq File Header VSCode Extension will insert a header into the current d
     $ jest // Unit Tests
     $ Spectator // Spectator helps you get rid of all the boilerplate grunt work, leaving you with readable, sleek and streamlined unit tests.
     $ Prettier // Prettier is an opinionated code formatter that helps us beautify code in a standardized way every time we save the code.
+    
+## CI/CD
+
+    $ build.yml // Install, Build, Lint and Test
+    $ codecov.yml // Running Test Coverage
+    $ firebase-hosting-merge.yml // Deploy to Firebase Hosting on merge
+    $ firebase-hosting-pull-request.yml // Deploy to Firebase Hosting on PR
+
+## Installation
+Install the dependencies and devDependencies and start the server.
+
+    $ Node.js v14.15.0+ to run. 
+
+## Start project
+Runs the app in the development mode. Open http://localhost:4200 to view it in the browser.
+
+The page will reload if you make edits. You will also see any lint errors in the console.
+
+## Running the project
+    $ npm install
+    $ npm start
+    $ npm run test
+    $ npm run test:ci
+    $ npm run test:coverage
+    $ npm run open:staging:ios (build ios in staging and open xcode)
 
 ## Development server
 
@@ -52,11 +88,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Run `ng test` to execute the unit tests via [Jest](https://jestjs.io/).
 
 ## Further help
 
