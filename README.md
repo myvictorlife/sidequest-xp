@@ -70,9 +70,8 @@ The page will reload if you make edits. You will also see any lint errors in the
     $ npm install
     $ npm start
     $ npm run test
-    $ npm run test:ci
     $ npm run test:coverage
-    $ npm run open:staging:ios (build ios in staging and open xcode)
+    $ npm run lint
 
 ## Development server
 
