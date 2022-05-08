@@ -2,7 +2,7 @@
  * File: shopping-cart.service.ts
  * Project: sidequest-xp
  * Created: Thursday, 5th May 2022 8:52:53 am
- * Last Modified: Friday, 6th May 2022 4:13:11 pm
+ * Last Modified: Sunday, 8th May 2022 12:10:17 pm
  * Copyright © 2022 Sidequest XP
  */
 
@@ -16,15 +16,15 @@ import { Store } from '@ngrx/store';
 export class ShoppingCartService {
   constructor(private store: Store) {}
 
-  addItemToCart(product: Product) {
+  addItemToCart(product: Product): void {
     this.store.dispatch(fromCart.addItemToCart({ product }));
   }
 
-  removeItemFromCart(product: Product) {
+  removeItemFromCart(product: Product): void {
     this.store.dispatch(fromCart.removeItemFromCart({ product }));
   }
 
-  addProduct(cart: ShoppingCart, product: Product) {
+  addProduct(cart: ShoppingCart, product: Product): ShoppingCart {
     const products = cart.products.filter((prod) => prod.id === product.id);
     if (!products?.length) {
       cart.products.push(product);
@@ -37,14 +37,20 @@ export class ShoppingCartService {
       ? product.minQty
       : 1;
     cart.qty = cart.products.length;
+    cart.total = this.calculateTotal(cart);
     return cart;
   }
 
-  removeProduct(cart: ShoppingCart, product: Product) {
+  removeProduct(cart: ShoppingCart, product: Product): ShoppingCart {
     product = this.setProductConfig(cart, product);
-    cart.total -= +product.price;
+    cart.total = this.calculateTotal(cart);
     cart.qty = cart.products.length;
     return cart;
+  }
+
+  calculateTotal(cart: ShoppingCart): number {
+    const total = cart.products.reduce(function(acc, product) { return acc + (+product.price * product.qty) }, 0);
+    return +total.toFixed(2);
   }
 
   setProductConfig(cart: ShoppingCart, product: Product): Product {
