@@ -10,6 +10,9 @@ The application should include the following features:
 Flow listing:
 Lists all products coming from the backend by category and it is possible to add the product to the cart.
 
+Product Details:
+Shows detailed product information.
+
 Cart flow:
 Shows the items in the cart, being able to increase or decrease the quantity and when it is confirmed, send the items to the backend.
 
