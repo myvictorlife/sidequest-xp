@@ -2,7 +2,7 @@
  * File: product-details.component.ts
  * Project: sidequest-xp
  * Created: Wednesday, 4th May 2022 7:21:30 am
- * Last Modified: Monday, 9th May 2022 5:36:45 pm
+ * Last Modified: Monday, 9th May 2022 8:11:41 pm
  * Copyright © 2022 Sidequest XP
  */
 
@@ -44,11 +44,9 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
   }
 
   addItemToCart(product: Product): void {
-    this.productDetailsService.addItemToCart(product);
-  }
-
-  removeItemToCart(product: Product): void {
-    this.productDetailsService.removeItemFromCart(product);
+    const newProduct: Product = JSON.parse(JSON.stringify(product));
+    newProduct.qty = 1;
+    this.productDetailsService.addItemToCart(newProduct);
   }
 
   ngOnDestroy(): void {
