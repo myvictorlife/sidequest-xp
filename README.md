@@ -54,7 +54,7 @@ The psioniq File Header VSCode Extension will insert a header into the current d
     
 ## CI/CD
 
-    $ build.yml // Install, Build, Lint and Test
+    $ build_v1.yml // Install, Build, Lint and Test
     $ codecov.yml // Running Test Coverage
     $ firebase-hosting-merge.yml // Deploy to Firebase Hosting on merge
     $ firebase-hosting-pull-request.yml // Deploy to Firebase Hosting on PR
