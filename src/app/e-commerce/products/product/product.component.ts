@@ -2,7 +2,7 @@
  * File: product.component.ts
  * Project: sidequest-xp
  * Created: Tuesday, 3rd May 2022 6:48:15 pm
- * Last Modified: Friday, 6th May 2022 4:12:04 pm
+ * Last Modified: Monday, 9th May 2022 8:33:20 am
  * Copyright © 2022 Sidequest XP
  */
 
@@ -34,6 +34,12 @@ export class ProductComponent {
   }
 
   addItem(product: Product) {
-    this.shoppingCartService.addItemToCart(product);
+    const newProduct: Product = JSON.parse(JSON.stringify(product));
+    newProduct.qty = !newProduct?.minQty
+      ? 1
+      : newProduct.minQty < product.qty
+      ? product.qty
+      : product.minQty;
+    this.shoppingCartService.addItemToCart(newProduct);
   }
 }

@@ -6,12 +6,13 @@ module.exports = {
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/dist/'],
   coverageThreshold: {
     global: {
-      branches: 3,
-      functions: 15,
-      lines: 30,
-      statements: 39,
+      branches: 56,
+      functions: 60,
+      lines: 63,
+      statements: 64,
     },
   },
+  testRunner: 'jasmine2',
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
     '!<rootDir>/node_modules/',

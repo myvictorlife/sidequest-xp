@@ -2,15 +2,16 @@
  * File: product-details.component.ts
  * Project: sidequest-xp
  * Created: Wednesday, 4th May 2022 7:21:30 am
- * Last Modified: Friday, 6th May 2022 4:11:03 pm
+ * Last Modified: Monday, 9th May 2022 5:23:57 pm
  * Copyright © 2022 Sidequest XP
  */
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Product } from '@sidequest-xp-store/models/product.models';
-import { selectCurrentProduct } from '@sidequest-xp-store/product/selectors/product.selectors';
+import * as fromProduct from '@sidequest-xp-store/product/selectors/product.selectors';
+import { Subscription } from 'rxjs';
 import { ProductDetailsService } from './product-details.service';
 
 @Component({
@@ -18,9 +19,10 @@ import { ProductDetailsService } from './product-details.service';
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.scss'],
 })
-export class ProductDetailsComponent implements OnInit {
-  productSelected$ = this.store.select(selectCurrentProduct);
+export class ProductDetailsComponent implements OnInit, OnDestroy {
+  productSelected$ = this.store.select(fromProduct.selectCurrentProduct);
   product = {} as Product;
+  subscription = {} as Subscription;
   constructor(
     private store: Store,
     private router: Router,
@@ -32,24 +34,26 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   checkIfTheProductExists() {
-    this.productSelected$.subscribe((product) => {
-      if (!product) {
-        this.router.navigate(['e-commerce']);
-      } else {
-        this.product = product;
-      }
-    });
+    this.subscription.add(
+      this.productSelected$.subscribe((product) => {
+        if (!product) {
+          this.router.navigate(['e-commerce']);
+        } else {
+          this.product = product;
+        }
+      })
+    );
   }
 
-  addItemToCart(product: Product) {
+  addItemToCart(product: Product): void {
     this.productDetailsService.addItemToCart(product);
   }
 
-  removeItemToCart(product: Product) {
+  removeItemToCart(product: Product): void {
     this.productDetailsService.removeItemFromCart(product);
   }
 
-  // ngOnDestroy(): void {
-  //   this.subscriptions.unsubscribe();
-  // }
+  ngOnDestroy(): void {
+    if (this.subscription) this.subscription.unsubscribe();
+  }
 }

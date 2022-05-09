@@ -2,7 +2,7 @@
  * File: product-details.component.spec.ts
  * Project: sidequest-xp
  * Created: Wednesday, 4th May 2022 8:12:27 am
- * Last Modified: Friday, 6th May 2022 5:20:11 pm
+ * Last Modified: Monday, 9th May 2022 5:27:26 am
  * Copyright © 2022 Sidequest XP
  */
 
@@ -32,7 +32,7 @@ describe('ProductService', () => {
     expect(spectator).toBeTruthy();
   });
 
-  it('should create', () => {
+  it('should fetch all products', () => {
     const spyGet = jest.spyOn(httpClient, 'get').mockImplementation(() => {
       return of({
         data: {
