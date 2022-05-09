@@ -16,7 +16,8 @@ Shows detailed product information.
 Cart flow:
 Shows the items in the cart, being able to increase or decrease the quantity and when it is confirmed, send the items to the backend.
 
-##  Config Environments
+## Config Environments
+
 baseURL: 'https://us-central1-sidequest-xp.cloudfunctions.net'
 
 ## Configure psioniq File Header [LINK](https://marketplace.visualstudio.com/items?itemName=psioniq.psi-header)
@@ -51,7 +52,7 @@ The psioniq File Header VSCode Extension will insert a header into the current d
     $ jest // Unit Tests
     $ Spectator // Spectator helps you get rid of all the boilerplate grunt work, leaving you with readable, sleek and streamlined unit tests.
     $ Prettier // Prettier is an opinionated code formatter that helps us beautify code in a standardized way every time we save the code.
-    
+
 ## CI/CD
 
     $ build_v1.yml // Install, Build, Lint and Test
@@ -60,16 +61,19 @@ The psioniq File Header VSCode Extension will insert a header into the current d
     $ firebase-hosting-pull-request.yml // Deploy to Firebase Hosting on PR
 
 ## Installation
+
 Install the dependencies and devDependencies and start the server.
 
-    $ Node.js v14.15.0+ to run. 
+    $ Node.js v14.15.0+ to run.
 
 ## Start project
+
 Runs the app in the development mode. Open http://localhost:4200 to view it in the browser.
 
 The page will reload if you make edits. You will also see any lint errors in the console.
 
 ## Running the project
+
     $ npm install
     $ npm start
     $ npm run test

@@ -2,7 +2,7 @@
  * File: cart.reducer.ts
  * Project: sidequest-xp
  * Created: Wednesday, 4th May 2022 10:11:12 pm
- * Last Modified: Friday, 6th May 2022 4:40:55 pm
+ * Last Modified: Monday, 9th May 2022 3:56:45 pm
  * Copyright © 2022 Sidequest XP
  */
 
@@ -37,6 +37,9 @@ export const reducer = createReducer(
     })
   )
 );
+
+export const getSelectedCurrentShoppingCartId = (state: State) =>
+  state.selectedShoppingCartId;
 
 // get the selectors
 const { selectIds, selectEntities, selectAll, selectTotal } =

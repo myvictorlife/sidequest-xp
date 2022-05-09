@@ -39,7 +39,6 @@
             type="button"
             name="button"
             (click)="removeItem(product)"
-            [disabled]="checkMaxQty(product)"
           >
             <img
               src="https://designmodo.com/demo/shopping-cart/minus.svg"
@@ -47,7 +46,7 @@
             />
           </button>
         </div>
-        <div class="total-price">{{ +product.price * product.qty }}</div>
+        <div class="total-price">{{ getTotal(product) }}</div>
       </div>
     </div>
     <div

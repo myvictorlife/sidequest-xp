@@ -2,7 +2,7 @@
  * File: cart.selectors.ts
  * Project: sidequest-xp
  * Created: Wednesday, 4th May 2022 10:39:37 pm
- * Last Modified: Thursday, 5th May 2022 7:58:45 am
+ * Last Modified: Monday, 9th May 2022 4:09:16 pm
  * Copyright © 2022 Sidequest XP
  */
 
@@ -32,7 +32,7 @@ export const selectShoppingCartTotal = createSelector(
 );
 export const selectCurrentShoppingCartId = createSelector(
   selectShoppingCartState,
-  fromCart.selectShoppingCartTotal
+  fromCart.getSelectedCurrentShoppingCartId
 );
 export const selectCurrentShoppingCart = createSelector(
   selectShoppingCartEntities,
