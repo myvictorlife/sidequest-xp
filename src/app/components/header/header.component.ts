@@ -19,8 +19,11 @@ import { selectTotalOfItem } from '@sidequest-xp-store/cart/selectors/cart.selec
 })
 export class HeaderComponent {
   selectTotalOfItem$ = this.store.select(selectTotalOfItem);
-  constructor(private router: Router, private store: Store,
-    public translateService: TranslateService) {}
+  constructor(
+    private router: Router,
+    private store: Store,
+    public translateService: TranslateService
+  ) {}
 
   redirectToCart() {
     this.router.navigate(['e-commerce/cart']);

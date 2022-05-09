@@ -40,7 +40,7 @@ import { ProductCategoryService } from './product-category/product-category.serv
     FlexLayoutModule,
     MatCardModule,
     MatButtonModule,
-    MatChipsModule
+    MatChipsModule,
   ],
   providers: [ProductDetailsService, ProductCategoryService],
 })

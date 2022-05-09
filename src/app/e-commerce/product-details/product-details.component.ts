@@ -35,12 +35,12 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
 
   checkIfTheProductExists() {
     this.subscription = this.productSelected$.subscribe((product) => {
-        if (!product) {
-          this.router.navigate(['e-commerce']);
-        } else {
-          this.product = product;
-        }
-      });
+      if (!product) {
+        this.router.navigate(['e-commerce']);
+      } else {
+        this.product = product;
+      }
+    });
   }
 
   addItemToCart(product: Product): void {

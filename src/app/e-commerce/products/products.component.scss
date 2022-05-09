@@ -1,0 +1,17 @@
+/*
+ * File: products.component.scss
+ * Project: sidequest-xp
+ * Created: Tuesday, 3rd May 2022 4:14:18 pm
+ * Last Modified: Monday, 9th May 2022 6:49:05 pm
+ * Copyright © 2022 Sidequest XP
+ */
+
+.products {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+
+  .product {
+    flex: 1 1 0px;
+  }
+}
