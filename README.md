@@ -1,4 +1,4 @@
-# SidequestXp [LINK](https://sidequest-xp.web.app/)
+# Sidequest Xp: [WEBSITE](https://sidequest-xp.web.app/)
 
 ![Build](https://github.com/myvictorlife/sidequest-xp/actions/workflows/build_v1.yml/badge.svg)
 [![codecov](https://codecov.io/gh/myvictorlife/sidequest-xp/branch/master/graph/badge.svg)](https://codecov.io/gh/myvictorlife/sidequest-xp)
