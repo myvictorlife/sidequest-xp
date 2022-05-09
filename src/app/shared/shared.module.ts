@@ -16,16 +16,9 @@ import { ShoppingCartService } from './shopping-cart/shopping-cart.service';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    HttpClientModule,
-    TranslateModule
-  ],
+  imports: [CommonModule, HttpClientModule, TranslateModule],
   providers: [ProductService, ShoppingCartService],
-  exports: [
-    CommonModule,
-    TranslateModule
-  ]
+  exports: [CommonModule, TranslateModule],
 })
 export class SharedModule {}
 

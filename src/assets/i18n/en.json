@@ -9,7 +9,8 @@
     "DETAILS": "Details"
   },
   "PRODUCT_DETAILS": {
-    "ADD_TO_CART": "Add to cart"
+    "ADD_TO_CART": "Add to cart",
+    "ABOUT_THE_ITEM": "About the item"
   },
   "CART": {
     "SHOPPING_BAG": "Shopping Bag",
