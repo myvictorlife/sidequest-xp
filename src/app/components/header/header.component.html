@@ -4,8 +4,9 @@
       width="200"
       alt="Sidequest Xp Logo"
       src="	https://sidequest-xp.com.br/images/logo_xp.png"
-      style="margin-left: 10%"
-    />
+      class="side-quest-image"
+      (click)="redirectToHome()"
+    /> {{ 'PROJECT_NAME' | translate }}
     <span class="header-spacer"></span>
     <p>
       <mat-icon
@@ -72,10 +73,10 @@
       <mat-icon>language</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>
+      <button mat-menu-item (click)="changeLanguage('en')">
         <span>{{ 'HEADER.ENGLISH' | translate }}</span>
       </button>
-      <button mat-menu-item>
+      <button mat-menu-item (click)="changeLanguage('pt')">
         <span>{{ 'HEADER.PORTUGUESE' | translate }}</span>
       </button>
     </mat-menu>

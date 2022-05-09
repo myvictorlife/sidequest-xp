@@ -2,16 +2,15 @@
  * File: e-commerce.module.ts
  * Project: sidequest-xp
  * Created: Tuesday, 3rd May 2022 6:43:58 pm
- * Last Modified: Friday, 6th May 2022 5:29:06 pm
+ * Last Modified: Monday, 9th May 2022 6:18:30 pm
  * Copyright © 2022 Sidequest XP
  */
 
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './products/product/product.component';
 import { EcommerceRoutingModule } from './e-commerce.routing.module';
-import { TranslateModule } from '@ngx-translate/core';
+
 import { ComponentsModule } from '../components/components.module';
 import { ProductsComponent } from './products/products.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -35,15 +34,13 @@ import { ProductCategoryService } from './product-category/product-category.serv
     ProductCategoryComponent,
   ],
   imports: [
-    CommonModule,
+    SharedModule,
     EcommerceRoutingModule,
-    TranslateModule.forChild(),
     ComponentsModule,
     FlexLayoutModule,
     MatCardModule,
     MatButtonModule,
-    MatChipsModule,
-    SharedModule,
+    MatChipsModule
   ],
   providers: [ProductDetailsService, ProductCategoryService],
 })
