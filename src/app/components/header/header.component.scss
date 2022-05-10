@@ -1,5 +1,6 @@
 .header {
   background: linear-gradient(to right, #000 0%, #c22ed0 100%);
+  height: auto;
 }
 
 .side-quest-image {
@@ -14,5 +15,11 @@
 .shopping_cart {
   margin-right: 20px;
   margin-top: 15px;
+  color: white;
+}
+
+.change-language {
+  background: none;
+  border: none;
   color: white;
 }

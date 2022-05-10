@@ -1,7 +1,9 @@
 .content {
   background: #c22ed0;
-  height: -webkit-fill-available;
+  min-height: 100vh;
+  height: auto;
 }
+
 .shopping-cart {
   margin: 80px auto;
   background: #ffffff;

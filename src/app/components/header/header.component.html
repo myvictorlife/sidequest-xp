@@ -7,7 +7,6 @@
       class="side-quest-image"
       (click)="redirectToHome()"
     />
-    {{ 'PROJECT_NAME' | translate }}
     <span class="header-spacer"></span>
     <p>
       <mat-icon
@@ -67,6 +66,7 @@
       </svg>
     </a>
     <button
+      class="change-language"
       mat-icon-button
       [matMenuTriggerFor]="menu"
       aria-label="Example icon-button with a menu"
