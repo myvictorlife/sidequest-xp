@@ -20,6 +20,8 @@ Shows the items in the cart, being able to increase or decrease the quantity and
 
 baseURL: 'https://us-central1-sidequest-xp.cloudfunctions.net'
 
+Get Product List: https://us-central1-sidequest-xp.cloudfunctions.net/products
+
 ## Configure psioniq File Header [LINK](https://marketplace.visualstudio.com/items?itemName=psioniq.psi-header)
 
 The psioniq File Header VSCode Extension will insert a header into the current document - either at the start of the document or at the current cursor position. The header can be configured globally and/or per language. However, the configuration separates the comment syntax from the template body so it is likely that a single template will be able to cover most languages.
