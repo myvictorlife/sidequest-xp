@@ -15,6 +15,7 @@
   "CART": {
     "SHOPPING_BAG": "Shopping Bag",
     "SHOPPING_CART_EMPTY": "Your shopping cart is empty.",
-    "TOTAL": "Total"
+    "TOTAL": "Total",
+    "ITEM_ADDED_TO_THE_CART": "Item added to the cart"
   }
 }

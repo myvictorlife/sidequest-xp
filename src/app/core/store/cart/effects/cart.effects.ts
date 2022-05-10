@@ -2,7 +2,7 @@
  * File: cart.effects.ts
  * Project: sidequest-xp
  * Created: Wednesday, 4th May 2022 10:23:14 pm
- * Last Modified: Thursday, 5th May 2022 1:50:56 pm
+ * Last Modified: Tuesday, 10th May 2022 7:58:03 am
  * Copyright © 2022 Sidequest XP
  */
 
@@ -13,6 +13,8 @@ import * as fromCart from '@sidequest-xp-core/store/cart/actions/cart.actions';
 import { ShoppingCartService } from '@sidequest-xp-shared/shopping-cart/shopping-cart.service';
 import { of, switchMap, withLatestFrom } from 'rxjs';
 import { selectCurrentShoppingCart } from '../selectors/cart.selectors';
+import { ToastrService } from 'ngx-toastr';
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable()
 export class CartEffects {
@@ -28,6 +30,9 @@ export class CartEffects {
         const cart = this.shoppingCartService.addProduct(
           shoppingCartLatest,
           product
+        );
+        this.toastrService.info(
+          this.translateService.instant('CART.ITEM_ADDED_TO_THE_CART')
         );
         return of(fromCart.addOrUpdateShoppingCart({ shoppingCart: cart }));
       })
@@ -47,6 +52,9 @@ export class CartEffects {
           shoppingCartLatest,
           product
         );
+        this.toastrService.warning(
+          this.translateService.instant('CART.ITEM_REMOVED_FROM_THE_CART')
+        );
         return of(fromCart.addOrUpdateShoppingCart({ shoppingCart: cart }));
       })
     )
@@ -55,6 +63,8 @@ export class CartEffects {
   constructor(
     private actions$: Actions,
     private store: Store,
-    private shoppingCartService: ShoppingCartService
+    private shoppingCartService: ShoppingCartService,
+    private toastrService: ToastrService,
+    private translateService: TranslateService
   ) {}
 }

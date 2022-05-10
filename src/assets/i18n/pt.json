@@ -15,6 +15,8 @@
   "CART": {
     "SHOPPING_BAG": "Carrinho de Compras",
     "SHOPPING_CART_EMPTY": "Seu carrinho está vazio.",
-    "TOTAL": "Total"
+    "TOTAL": "Total",
+    "ITEM_ADDED_TO_THE_CART": "Item adicionado no carrinho",
+    "ITEM_REMOVED_FROM_THE_CART": "Item removido no carrinho"
   }
 }
