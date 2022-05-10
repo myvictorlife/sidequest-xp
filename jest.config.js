@@ -15,6 +15,8 @@ module.exports = {
   testRunner: 'jasmine2',
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
+    '!src/**/*.module.ts',
+    '!src/main.ts',
     '!<rootDir>/node_modules/',
     '!<rootDir>/src/polyfills.ts',
   ],
