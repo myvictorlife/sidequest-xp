@@ -1,6 +1,7 @@
 <div class="mat-chip-category-list">
   <mat-chip-list aria-label="Product category selection">
     <mat-chip
+      class="chips"
       *ngFor="let category of categories$ | async"
       (click)="selectCategory(category)"
     >

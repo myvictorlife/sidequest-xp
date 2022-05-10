@@ -6,3 +6,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+::ng-deep .mat-chip-list-wrapper {
+  justify-content: center;
+}

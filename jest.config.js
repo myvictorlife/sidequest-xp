@@ -17,6 +17,8 @@ module.exports = {
     'src/**/*.{js,jsx,ts,tsx}',
     '!src/**/*.module.ts',
     '!src/main.ts',
+    '!src/app/core/store/index.ts',
+    '!src/app/core/core.effects.ts',
     '!<rootDir>/node_modules/',
     '!<rootDir>/src/polyfills.ts',
   ],
